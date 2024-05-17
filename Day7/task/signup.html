@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/> -->
+    <style>
+        .container {
+        border: 3px solid blue;
+        margin: 50px auto;
+        /* align-items: center;
+        justify-content: center; */
+        border-radius: 30px;
+        height: 500px;
+        width: 400px;
+        text-align: center;
+        background-image: url(./back.jpeg);
+        background-size: cover;
+      }
+      #user{
+        border-radius: 10px;
+        height: 30px;
+        width: 200px;
+      }
+      #btn{
+        width: 100px;
+        height: 30px;
+        background-color: aquamarine;
+        border: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        
+      }
+      #btn:hover{
+        background-color: blue;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="./login.html">
+        <h1>Create an Account</h1>
+        <!-- <label for="user" style="font-size: 20px;">Full Name</label><br><br> -->
+        <input type="text" name="name" placeholder="Full Name" id="user" required><br><br>
+        <!-- <label for="user" style="font-size: 20px;">Username</label><br><br> -->
+        <input type="email" name="mail" placeholder="Enter mail " id="user" required><br><br>
+        <input type="password" placeholder="Set Password" id="user" name="pass" required><br><br>
+        <input type="text" placeholder="confirm password" id="user" required><br><br>
+        <input type="checkbox" id="check">
+        <label for="check" >I agree to <a href="">Terms of Service</a> and <a href="">Privacy Policy.</a</label><br><br>
+            <input type="submit" id="btn" value="Submit">
+            <br>
+            <p>Already have an Account?<a href="./login.html">Login</a></p>
+        </form><br><br><br>
+        <a href="./home.html">Home</a>
+        
+    </div>
+</body>
+</html>

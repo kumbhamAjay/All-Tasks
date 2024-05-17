@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</Form></title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Registration Form</legend>
+            <u><label for="fname">First Name:</label></u>
+            <input type="text" id="fname" name="fname" required placeholder="eg:First"><br><br>
+            <u><label for="mname">Middle Name:</label></u>
+            <input type="text" id="mname" name="mname" placeholder="eg:Middle"><br><br>
+            <u><label for="lname">Last Name:</label></u>
+            <input type="text" id="lname" name="lname" required placeholder="eg:Last"><br><br>
+            <u><label for="mail">Email:</label></u>
+            <input type="email" id="mail" name="Email" required placeholder="eg:abc@gmail.com"><br><br>
+            <u><label for="mobile">Contact:</label></u>
+            <input type="tel" id="mobile" name="mobile" required pattern="{10}"><br><br>
+            <u><label for="dob">DOB:</label></u>
+            <input type="date" id="dob">
+            <u><p>Gender:</p></u>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label><br>
+            <input type="radio" id="fmale" name="gender">
+            <label for="fmale">Female</label><br>
+            <input type="radio" id="Others" name="gender">
+            <label for="Others">Others</label><br>
+            <u><p>Skills:</p></u>
+            <input type="checkbox" id="skill1" name="skill1">
+            <label for="skill1">HTML</label>
+            <input type="checkbox" id="skill2" name="skill2">
+            <label for="skill2">CSS</label>
+            <input type="checkbox" id="skill3" name="skill3">
+            <label for="skill3">JvaScript</label>
+            <input type="checkbox" id="skill4" name="skill4">
+            <label for="skill4">React</label>
+            <input type="checkbox" id="skill5" name="skill5">
+            <label for="skill5">Redux</label>
+            <br>
+            <br>
+            <u><label for="resume">Upload Resume:</label></u>
+            <p>(**file should be PDF only)</p>
+            <input type="file" required accept=".pdf"><br><br>
+            <u><label for="photo">Upload Photo:</label></u><br><br>
+            <input type="file" name="ima" id="photo" accept="image/*"><br><br>
+            <hr>
+            <input type="submit" value="Submit"><br><br>
+            <a href="./Home.html">Back</a>
+
+
+        </fieldset>
+    </form>
+</body>
+</html>

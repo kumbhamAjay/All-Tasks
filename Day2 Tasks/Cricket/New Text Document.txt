@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cricket</title>
+</head>
+<body>
+<h1><marquee>Hi....WelCome to CRIC Info</marquee></h1>
+
+ </body>
+</html>
