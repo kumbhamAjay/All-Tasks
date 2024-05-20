@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+        }
+        .main{
+            position: relative;
+        }
+        .nav{
+            background-color: white;
+            position: fixed;
+            width: 100vw;
+            top: 0;
+            height: 10vh;
+            padding-top: -20px;
+            box-shadow: 4px 4px 9px gray;
+            z-index: 2;
+        }
+        .nav div{
+            position: absolute;
+            right: 30px;
+            top: 25px;
+            
+        }
+        .nav h1{
+            margin-top: 20px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            border: none;
+            font-size: large;
+        }
+        button:hover{
+            background-color: rgb(228, 236, 227);
+            cursor: pointer;
+        }
+        .Architect h1{
+            position: absolute;
+            top: 440px;
+            left: 40%;
+            color: white;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* z-index: -1; */
+        }
+        #project img{
+            height: 225px;
+            margin: 10px;
+            
+        }
+        #project{
+            margin: 20px 10px;
+        }
+        #about{
+            margin: 20px;
+        }
+        #about img{
+            height: 225px;
+            margin: 8px;
+            
+        }
+        .img{
+            display: flex;
+        }
+        #but{
+            background-color: antiquewhite;
+            width: 350px;
+        }
+        #but:hover{
+            background-color: rgb(181, 176, 169);
+        }
+        input{
+            width: 95%;
+            height: 30px;
+            margin: 10px;
+        }
+        span{
+            background-color: black;
+        }
+        .build figcaption{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            /* height: 40px; */
+            width: 100px;
+
+        }
+        .build{
+            position: relative;
+            display: flex;
+        }
+    </style>
+   
+<div class="main">
+    <div class="nav">
+        <a href=""></a><h1>&nbsp;&nbsp;BR Architects</h1>
+        <div>
+            <a href="#project"><button>Projects</button></a>&nbsp;&nbsp;
+            <a href="#about"><button>About</button></a>&nbsp;&nbsp;
+            <a href="#contact"><button>Contact</button></a>&nbsp;
+        </div>
+
+    </div>
+    <div class="Architect">
+        <img src="./Assets/architect.jpg" alt="">
+        <h1><span>BR</span> Architects</h1><br><br>  
+    </div>
+    <div id="project">
+        <h1>&nbsp;Projects</h1><br><br><hr><br>
+        <br>
+        <div class="build">
+            <div>
+                <img src="./Assets/house1.jpg" alt="">
+                <figcaption style="position: absolute;top: 10px;left: 10px;">Summer House</figcaption>
+            </div>
+            <div>
+                <img src="./Assets/house4.jpg" alt="">
+                <figcaption style="position: absolute;top: 10px;left: 368px;">Barn House</figcaption>
+            </div>
+            <div>
+                <img src="./Assets/house2.jpg" alt="">
+                <figcaption style="position: absolute;top: 10px;left: 725px;">Renovated</figcaption>
+            </div>
+            <div>
+                <img src="./Assets/house3.jpg" alt="">
+                     <figcaption style="position: absolute;top: 10px;left: 1084px;">Summer House</figcaption>
+
+            </div>
+        </div>
+        <div class="build">
+            <div>
+                <img src="./Assets/house1.jpg" alt="">
+                <figcaption style="position: absolute;top: 10px;left: 10px;">Summer House</figcaption>
+            </div>
+            <div>
+                <img src="./Assets/house4.jpg" alt="">
+                <figcaption style="position: absolute;top: 10px;left: 368px;">Renovated</figcaption>
+            </div>
+            <div>
+                <img src="./Assets/house2.jpg" alt="">
+                <figcaption style="position: absolute;top: 10px;left: 725px;">Barnr House</figcaption>
+            </div>
+            <div>
+                <img src="./Assets/house3.jpg" alt="">
+                     <figcaption style="position: absolute;top: 10px;left: 1084px;">Winter House</figcaption>
+
+            </div>
+        </div>
+            
+            
+            
+        
+
+    </div>
+    <div id="about">
+        <h1>About</h1><br><br><hr><br><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aliquid perferendis, corrupti cum, mollitia minima natus alias tenetur illum doloremque at asperiores provident consectetur ratione inventore eveniet maxime.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aliquid perferendis, corrupti cum, mollitia minima natus alias tenetur illum doloremque at asperiores provident consectetur ratione inventore eveniet maxime</p>
+        <br><br>
+        <div class="img">
+            <div><img src="./Assets/team1.jpg" alt=""><br>
+                <p style="font-size: 30px;">John Doe</p><br>
+                <p style="font-size: 20px;">CEO & Founder</p><br>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <br><button id="but">Contact</button>
+            </div>
+            <div><img src="./Assets/team2.jpg" alt="">
+                <p style="font-size: 30px;">Jane Doe</p><br>
+                <p style="font-size: 20px;">Architect</p><br>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <br><button id="but">Contact</button>
+            </div>
+            <div><img src="./Assets/team3.jpg" alt="">
+                <p style="font-size: 30px;">Mike Ross
+                    </p><br>
+                <p style="font-size: 20px;">Architect</p><br>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <br><button id="but">Contact</button>
+            </div>
+            <div><img src="./Assets/team4.jpg" alt="">
+                <p style="font-size: 30px;">Jan star</p><br>
+                <p style="font-size: 20px;">Architect</p><br>
+                
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                <br><button id="but">Contact</button>
+            </div>
+        </div>
+        <br><br>
+        <div id="contact">
+            <h1>Contact</h1><br><br><hr><br><br>
+            <form action="">
+                <p>Lets get in touch and talk about your next project.</p>
+                <div>
+                    <input type="text" name="Name" id="" placeholder="Name" required><br>
+                <input type="email" name="Mail" placeholder="Mail" required><br>
+                <input type="text" name="subject" placeholder="Subject" required><br>
+                <input type="text" name="comment" placeholder="Comment" required><br>
+                <input type="submit" value="SEND MESSAGE" style="background-color: black; color: white;width: 150px; height: 50px;">
+                </div><br>
+                <div>
+                    <img style="height: 100vh; width: 100vw;" src="./Assets/map.jpg" alt="">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+</div>
+   
+</body>
+</html>
