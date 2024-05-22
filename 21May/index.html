@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [required]{
+            border:1px solid red;
+        }
+        [value*="Year"]{
+            background-color: green;
+        }
+        [type="button"]{
+            height: 30px;
+            width: 80px;
+            background-color: aquamarine;
+        }
+        [value~=sport]{
+            background-color: bisque;
+        }
+        [value^="color"]{
+            background-color: rgb(43, 226, 58);
+        }
+        [value|="red"]{
+            background-color: red;
+        }
+        [value$="blue"]{
+            background-color: rgb(17, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Form</legend>
+            <p>*Fields Marked red are madatory</p>
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" required><br><br>
+            <label for="mail">Mail:</label>
+            <input type="email" id="mail" name="Mail" required><br><br>
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="Phone" required><br><br>
+            <label for="exp">Work Experience:</label>
+            <select name="Experience" id="">
+                <option value="Select">Fresher</option>
+                <option value="1 Year">1 Year</option>
+                <option value="2 Years">2+ Years</option>
+                <option value="2 Years">2+ Years</option>
+            </select>
+            <br>
+            <h4>Sports</h4>
+            <input type="checkbox" id="sport">
+            <label for="sport" value="Football sport">Football sport</label><br>
+            <input type="checkbox" id="sport">
+            <label for="sport" value="badminton sport">Badminton sport</label><br>
+            <input type="checkbox" id="sport">
+            <label for="sport" value="Koko sport">Tennis sport</label><br>
+            <br>
+            Colors::<br>
+            <input type="radio" name="color"><label for="" value="red-color">Red</label><br>
+            <input type="radio" name="color"><label for="" value="color-blue">Blue</label><br>
+            <input type="radio" name="color"><label for="" value="color-green">Green</label>
+            <br>
+<br>
+            
+            <input type="button" value="Submit">
+
+
+        </fieldset>
+    </form>
+</body>
+</html>
