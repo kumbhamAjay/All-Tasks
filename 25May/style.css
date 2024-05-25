@@ -1,0 +1,224 @@
+*{
+    margin: 0%;
+    color: white;
+    background-color:black;
+    text-align: center;
+}
+main{
+    width: 100vh;
+    display: flex;
+
+}
+
+aside{
+    width: 10%;
+    height: 100vh;
+    background-color: rgb(6, 3, 15);
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    
+}
+aside div{
+    width: 100%;
+    /* height: 100%; */
+    /* border: 1px solid; */
+    /* background-color: aquamarine; */
+}
+aside div img{
+    width: 100%;
+    background-color: white;
+
+    
+}
+aside div img:hover{
+    width: 100%;
+    background-color: rgb(177, 169, 169);
+    
+    
+}
+
+aside div p{
+    text-align: center;
+    
+    background-color: antiquewhite;
+
+}
+section{
+    width: 90%;
+    /* border: 2px solid red; */
+    position: absolute;
+    right: 0%;
+}
+.profile{
+    width: 100%;
+
+}
+.profile img{
+    width: 80%;
+    margin: 40px;
+}
+.profile h1{
+    padding-top: 50px;
+}
+h2{
+    text-align: left;
+}
+.text{
+    width: 70%;
+    margin-left: 15%;
+    /* border: 1px solid white; */
+}
+.price{
+    display: flex;
+    gap: 10px;
+    /* border: 1px solid white; */
+
+}
+.price-1{
+    width: 50%;
+    background-color: white(163, 167, 167);
+}
+.price-1 p{
+    margin: 10px 0px;
+    /* background-color: rgb(35, 34, 34); */
+}
+.price-2{
+    width: 50%;
+    /* background-color: white(163, 167, 167); */
+}
+.price-2 p{
+    margin: 10px 0px;
+    /* background-color: rgb(35, 34, 34); */
+}
+
+.reputation{
+    width: 70%;
+    margin-left: 15%;
+    /* border: 1px solid white; */
+}
+.reputation img{
+    border-radius: 50%;
+    height: 70px;
+    /* margin: 20px; */
+}
+.reputation div{
+    display: flex;
+    /* margin-top: 30px; */
+}
+.para{
+    display: flex;
+    flex-direction: column;
+}
+.reputation-1{
+    align-items: center;
+    /* border: 1px solid ; */
+    padding: 20px;
+}
+.reputation-1 div{
+    margin: 10px;
+    justify-content: center;
+}
+.photos{
+    width: 70%;
+    margin-left: 15%;
+    /* border: 1px solid; */
+    
+}
+.photos-1{
+    width: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    gap: 5px;
+}
+.photos-2{
+    width: 50%;
+    gap: 5px;
+}
+.photos-2 img{
+    width: 100%;
+}
+.contact{
+    width: 70%;
+    margin-left: 15%;
+    /* background-color: white; */
+}
+.contact img{
+    width: 40px;
+    background-color:rgb(196, 237, 255);
+   
+    border-radius: 20px;
+
+}
+.inputs{
+    width: 100%;
+    /* border: 1px solid white; */
+}
+input{
+    width: 90%;
+    height: 40px;
+    margin: 10px;
+    background-color: aliceblue;
+}
+.icons{
+    display: flex;
+    gap: 20px;
+}
+button{
+    width: 150px;
+    height: 40px;
+    border: none;
+
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+@media screen and (max-width:600px) {
+    main{
+        width: 100vw;
+    }
+    aside{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        /* background-color: white; */
+        position: fixed;
+        z-index: 3;
+    }
+    nav button{
+        width: 100%;
+    }
+    section{
+        width: 100%;
+    }
+    .text{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .price{
+        display: flex;
+        flex-direction: column;
+    }
+    .price-1,.price-2{
+        width: 100%;
+    }
+    .photos{
+        width: 90%;
+        margin-left:5%
+    }
+    .photos-1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .photos-2{
+        width: 100%;
+    }
+    /* .profile,.about,.contact.photos{
+        margin-top: 100px;
+    } */
+}
