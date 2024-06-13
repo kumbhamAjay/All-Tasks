@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        #one:checked~.fan{
+            transform: rotate(360deg);
+            background-color: green;
+            
+        }
+        #two:checked~.fan1{
+            transform: rotate(360deg);
+            background-color: rgb(221, 205, 23);
+            
+        }
+        #three:checked~.fan2{
+            transform: rotate(180deg);
+            background-color: rgb(128, 0, 0);
+            
+        }
+        .fan{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            /* border: 1px solid; */
+            transition-property: all;
+            transition-duration: 10s;
+            
+
+        }
+        .fan1{
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        .fan2{
+            transition-property: all;
+            transition-duration: 10s;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <input type="radio" id="one" name="fan"><span>speed 1x</span>
+        <input type="radio" id="two" name="fan"><span>speed 2x</span>
+        <input type="radio" id="three" name="fan"><span>speed 3x</span>
+        <div class="fan fan1 fan2">
+            <img src="./fan.png" alt="" width="200px" height="200px">
+        </div>
+    </main>
+</body>
+</html>

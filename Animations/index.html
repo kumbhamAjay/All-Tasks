@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes ani{
+            0%{
+               top: 0%;
+                left: 0%;
+            }
+            25%{
+               
+               left: 100px;
+               top: 0;
+               background-color: red;
+               
+          
+            }
+            50%{
+               
+               left: 100px;
+               top: 100px;
+               background-color: green;
+            }
+            75%{
+              top: 100px;
+              left: 0;
+               background-color: pink;
+            }
+            100%{
+               top: 0;
+               left: 0;
+            }
+        }
+        
+        .cont{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: rgb(14, 117, 207);
+            /* border-radius: 50%; */
+            animation-name: ani;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="cont">
+
+        </div>
+    
+    
+</body>
+</html>
