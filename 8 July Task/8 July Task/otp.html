@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="otp">Enter length of OTP</label><br>
+    <input type="number" id="otp">
+    <button id="btn">Generate OTP</button>
+    <p id="id1"></p>
+    <script>
+        let ip=document.getElementById("otp")
+        let paa=document.getElementById("id1")
+        
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+            s="" 
+            for(i=0;i<ip.value;i++){
+                let num=Math.floor(Math.random()*10)
+                s+=num
+            }
+            paa.innerHTML=s
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num">Enter any Number:</label>
+    <input type="number" id="num">
+    <button id="btn1">Get Factorial</button>
+    <h1 id="h11"></h1>
+    <script>
+        let ip=document.getElementById("num")
+        let h1=document.getElementById("h11")
+        btn1.addEventListener("click",(e)=>{
+            e.preventDefault()
+            fact=1
+            for(i=1;i<=ip.value;i++){
+                fact=fact*i
+
+            }
+            h1.innerHTML=fact
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="a1">Hi Welcome</h1>
+    <button id="btn">Change color of Text</button>
+    <script>
+      let h11 = document.getElementById("a1");
+      btn.addEventListener("click", () => {
+        // console.log("hi")
+        let k= Math.floor(Math.random() * 10);
+        switch (k) {
+          case 1:
+            h11.style.color = "red";
+            break;
+          case 2:
+            h11.style.color = "blue";
+            break;
+          case 3:
+            h11.style.color = "orange";
+            break;
+          case 4:
+            h11.style.color = "pink";
+            break;
+          case 5:
+            h11.style.color = "yellow";
+            break;
+          case 6:
+            h11.style.color = "green";
+            break;
+          default:
+            h11.style.color = "violet";
+        }
+      });
+    </script>
+  </body>
+</html>

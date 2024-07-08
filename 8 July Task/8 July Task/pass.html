@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <label for="pass">Password</label>
+    <button id="btn1">Hide</button>
+    <input type="text" id="pass">
+    
+    <script>
+        i=0
+        text=document.getElementsByTagName("input")
+        ip=document.getElementById("pass")
+        // btn=document.getElementById("btn1")
+        btn1.addEventListener("click",(e)=>{
+            e.preventDefault()
+            if(i%2==0){
+                ip.style.visibility="hidden"
+                btn1.innerHTML="Show"
+            }
+            else{
+                btn1.innerHTML="Hide"
+                ip.style.visibility="visible"
+            }
+            i++
+        })
+    </script>
+
+</body>
+</html>
