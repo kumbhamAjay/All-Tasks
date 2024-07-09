@@ -19,12 +19,12 @@
         btn1.addEventListener("click",(e)=>{
             e.preventDefault()
             if(i%2==0){
-                ip.style.visibility="hidden"
+                ip.setAttribute("type","password")
                 btn1.innerHTML="Show"
             }
             else{
                 btn1.innerHTML="Hide"
-                ip.style.visibility="visible"
+                ip.setAttribute("type","text")
             }
             i++
         })
