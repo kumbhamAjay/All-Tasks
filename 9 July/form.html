@@ -24,7 +24,7 @@
       }
       input{
         height: 30px;
-        width: 200px;
+        width: 100%;
         border-radius: 10px;
 
 
@@ -68,7 +68,7 @@
         e.preventDefault();
         obj = { name: ip.value, password: pass.value };
         arr.push(obj);
-        localStorage.setItem("Userdetails", JSON.stringify(obj));
+        localStorage.setItem("Userdetails", JSON.stringify(arr));
 
         let l2 = document.createElement("li");
         l2.id = "l2";
