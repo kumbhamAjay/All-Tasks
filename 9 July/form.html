@@ -4,16 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .cont{
+        box-sizing: border-box;
+        border: 1px solid;
+        width: 50vW;
+        display: grid;
+        justify-content: space-around;
+        background-color: antiquewhite;
+        margin-left: 25%;
+        padding: 20px;
+        border-radius: 20px;
+
+      }
+      label{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        /* margin-left: 100px; */
+      }
+      input{
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+
+
+      }
+      #btn{
+    
+        background-color: aqua;
+      }
+      .cont2{
+        /* border: 1px solid; */
+        width: 50vw;
+        margin-left: 25%;
+        margin-top: 20px;
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body>
     <form action="">
-      <label for="name">Name</label>
-      <input type="text" id="name" />
-      <label for="pass">password</label>
-      <input type="text" id="pass" />
+      <div class="cont">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" /><br>
+      <label for="pass">password</label><br>
+      <input type="text" id="pass" /><br>
       <input type="submit" id="btn" />
+    </div>
     </form>
-    <ol id="l1"></ol>
+    <div class="cont2">
+      <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Name and  password</h4>
+      <ol id="l1"></ol>
+    </div>
+  
+    
     <script>
       let arr = [];
       let ip = document.getElementById("name");
@@ -29,8 +73,9 @@
         let l2 = document.createElement("li");
         l2.id = "l2";
 
-        l2.innerHTML = `name=${obj.name} and password=${obj.password}`;
-        document.getElementById("l1").appendChild(l2);
+        l2.innerHTML = `${obj.name} and  ${obj.password}`;
+        let a=document.getElementsByClassName("cont2")[0]
+        document.getElementById("l1").appendChild(l2)
       });
     </script>
   </body>
