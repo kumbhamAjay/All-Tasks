@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #d1 {
+        /* border: 1px solid; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      p,h2{
+        text-align: center;
+      }
+      #div,
+      #div2 {
+        /* border: 1px solid; */
+      }
+      #div{
+        background-color: aquamarine;
+      }
+      #div2{
+        background-color: rgb(181, 157, 204);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="d1">
+      <div id="div">
+        <h2>Asynchronous Way</h2>
+      </div>
+    <div id="div2">
+      <h2 >Handling</h2>
+    </div>
+    </div>
+    <script>
+      d = document.getElementById("div");
+
+      function react(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div").append(p);
+          p.innerHTML = "React";
+          x();
+        }, 1000);
+      }
+      function html(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div").append(p);
+          p.innerHTML = "HTML";
+          x();
+        }, 8000);
+      }
+      function css(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div").append(p);
+          p.innerHTML = "CSS";
+          x();
+        }, 5000);
+      }
+      function js(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div").append(p);
+          p.innerHTML = "Java Script";
+          x();
+        }, 7000);
+      }
+      function Bootstrap(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div").append(p);
+          p.innerHTML = "Bootstrap";
+          x();
+        }, 4000);
+      }
+      function node(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div").append(p);
+          p.innerHTML = "NodeJS";
+          x();
+        }, 3000);
+      }
+      function database(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div").append(p);
+          p.innerHTML = "Database";
+          x();
+        }, 2000);
+      }
+      function react1(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div2").append(p);
+          p.innerHTML = "React";
+          x();
+        }, 1000);
+      }
+      function html1(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div2").append(p);
+          p.innerHTML = "HTML";
+          x();
+        }, 8000);
+      }
+      function css1(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div2").append(p);
+          p.innerHTML = "CSS";
+          x();
+        }, 5000);
+      }
+      function js1(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div2").append(p);
+          p.innerHTML = "Java Script";
+          x();
+        }, 7000);
+      }
+      function Bootstrap1(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div2").append(p);
+          p.innerHTML = "Bootstrap";
+          x();
+        }, 4000);
+      }
+      function node1(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div2").append(p);
+          p.innerHTML = "NodeJS";
+          x();
+        }, 3000);
+      }
+      function database1(x) {
+        setTimeout(() => {
+          p = document.createElement("p");
+          document.getElementById("div2").append(p);
+          p.innerHTML = "Database";
+          x();
+        }, 2000);
+      }
+      html();
+      css();
+      Bootstrap();
+      js();
+      react();
+      node();
+      database();
+     
+
+      html1(() => {
+        css1(() => {
+          Bootstrap1(() => {
+            js1(() => {
+              react1(() => {
+                node1(() => {
+                  database1();
+                });
+              });
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

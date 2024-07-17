@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+      #one {
+        /* border: 1px solid; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+      }
+      p{
+        text-align: center;
+        font-size: x-large;
+      }
+      #p1{
+        /* border: 1px solid; */
+      }
+      .d3{
+        /* border: 1px solid black; */
+        /* padding: 20px; */
+        background-color: rgb(174, 144, 202);
+        border-radius: 20px;
+      }
+      button{
+        background-color: greenyellow;
+        border: none;
+        height: 40px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        position: sticky;
+        top: 0px;
+      }
+      @media screen and (max-width:420px) {
+        #one{
+          grid-template-columns: 1fr 1fr;
+        }
+        
+      }
+      @media screen and (min-width:420px) and  (max-width:620px){
+        #one{
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+      }
+      
+    </style>
+  </head>
+  <body>
+    <button id="btn">Stop Generating Tables</button>
+    <div id="one">
+        <!-- <div id="two"></div> -->
+        
+    </div>
+    
+
+    <script>
+      d1 = document.getElementById("one");
+      btn = document.getElementById("btn");
+      btn1=document.getElementById("next")
+      i = 2;
+      k = 1;
+      id=1
+      let d2=document.createElement("div")
+            d2.id=`id${id}`
+            d2.className="d3"
+            document.getElementById("one").appendChild(d2)
+      x = setInterval(() => {
+        
+        let p = document.createElement("p");
+        p.id = "p1";
+        document.getElementById(`id${id}`).appendChild(p);
+        p.innerHTML = `${i}*${k}=${i * k}`;
+        k++;
+        if(k==11){
+            i=i+1
+            k=1
+            id++
+            d3=document.createElement("div")
+            d3.id=`id${id}`
+            d3.setAttribute("class","d3")
+            document.getElementById("one").appendChild(d3)
+           
+
+            // document.getElementById("d2").appendChild(p);
+
+        }
+      }, 500);
+
+      // table(j)
+      btn.addEventListener("click", () => {
+        clearInterval(x);
+      });
+      btn1.addEventListener("click",()=>{
+        k=k+1
+      })
+    </script>
+  </body>
+</html>
