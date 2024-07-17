@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .cont {
+        box-sizing: border-box;
+        border: 1px solid;
+        width: 50vw;
+        display: grid;
+        justify-content: space-around;
+        background-color: antiquewhite;
+        margin-left: 25%;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      label {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        /* margin-left: 100px; */
+      }
+      input {
+        height: 30px;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .btn {
+        background-color: aqua;
+        border-radius: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      #btn1 {
+        height: 30px;
+        width: 100px;
+      }
+      .cont2 {
+        /* border: 1px solid; */
+        width: 50vw;
+        margin-left: 25%;
+        margin-top: 20px;
+        background-color: yellow;
+      }
+      #id1{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <form action="">
+        <!-- <label for="name">Name</label><br /> -->
+        
+        <input type="text" id="name" placeholder="Name" title="Only alphabets" required/><br /><br>
+        <span id="id1"></span>
+        <!-- <label for="pass">password</label><br /> -->
+        <input type="password" id="pass" placeholder="Password" /><br />
+        <input type="submit" id="btn" class="btn"  />
+        
+      </form>
+      <a href="./login.html" target="_blank"
+        ><button class="btn" id="btn1">Login</button></a
+      >
+    </div>
+
+    <div class="cont2">
+      <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Name and password</h4>
+      <ol id="l1"></ol>
+    </div>
+
+    <script>
+      let arr = [];
+      let ip = document.getElementById("name");
+      let pass = document.getElementById("pass");
+      let btn = document.getElementById("btn");
+      let pa = document.getElementById("pa");
+      let ex=document.getElementById("id1")
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        // ip.setAttribute("required")
+        if(ip.value.length>=4){
+        let count=0
+        for(j of ip.value){
+          if(j.charCodeAt(0)>=65&&j.charCodeAt(0)<=90||j.charCodeAt(0)>=97&&j.charCodeAt(0)<=122){
+            count++
+          }
+        }
+        if(count==ip.value.length){
+          for (i of arr) {
+          if (i.name == ip.value && i.password == pass.value) {
+            // alert("Details already exists");
+            ex.innerHTML="User already Exists"
+            ex.style.display="block"
+            ex.style.color="red"
+            ip.style.border="1px solid red"
+            ex.style.marginTop="-10px"
+
+            ip.value = "";
+            pass.value = "";
+          }
+        }
+        obj = { name: ip.value, password: pass.value };
+        if (obj.name != "") {
+          arr.push(obj);
+          localStorage.setItem("Userdetails", JSON.stringify(arr));
+
+          let l2 = document.createElement("li");
+          l2.id = "l2";
+          ex.style.display="none"
+
+          l2.innerHTML = `${obj.name} and  ${obj.password}`;
+          let a = document.getElementsByClassName("cont2")[0];
+          document.getElementById("l1").appendChild(l2);
+        }
+
+        }
+        else{
+          ex.innerHTML="Usename should not contain Numbers and Special Characters"
+           ex.style.display="block"
+           ex.style.color="red"
+           ex.style.marginTop="-20px"
+        }
+      }
+      else{
+        ex.innerHTML="*Usename length should be atleast 4 characters"
+           ex.style.display="block"
+           ex.style.color="red"
+           ex.style.marginTop="-20px"
+
+      }
+
+        
+      });
+    </script>
+  </body>
+</html>

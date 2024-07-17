@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        form{
+            width: 50vw;
+            /* border: 1px solid; */
+            background-color: aqua;
+            margin-left: 25vw;
+            display: grid;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        input{
+            /* width: 50%; */
+            border-radius: 10px;
+            height: 20px;
+            
+        }
+        button{
+            background-color: greenyellow;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Name" id="ip"><br>
+        <input type="password" placeholder="Password" id="pass"><br>
+        <button id="btn">Login</button>
+    </form>
+    <h1 id="h1"></h1>
+    <script>
+        ip=document.getElementById("ip")
+        pass=document.getElementById("pass")
+        btn=document.getElementById("btn")
+        data=localStorage.getItem("Userdetails")
+        h1=document.getElementById("h1")
+        details=JSON.parse(data)
+        // a=JSON.stringify(details)
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+            len=details.length
+            let k=len
+            for(i of details){
+                if(i.name==ip.value&&i.password==pass.value){
+                    // h1.innerHTML="Logged In "
+                    location.href="https://www.youtube.com/"
+                    k--
+                }
+            }
+            ip.value=""
+            pass.value=""
+            if(k==len){
+                h1.innerHTML="Enter Your Details"
+            }
+            // console.log(details)
+            
+        }
+        )
+        
+    </script>
+</body>
+</html>
