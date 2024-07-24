@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cont {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      #card {
+        /* border: 1px solid; */
+        width: 300px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px;
+      }
+      img {
+        width: 70%;
+        height: 50%;
+        margin: 15%;
+        text-align: center;
+      }
+      p{text-align: center;}
+    </style>
+  </head>
+  <body>
+    <main>
+      <span>FILTER PRICE:</span>
+      <button id="one">Below 100</button>
+      <button id="two">100-300</button>
+      <button id="three">>300</button>
+      <div id="cont"></div>
+    </main>
+    <script>
+      cont = document.getElementById("cont");
+      one = document.getElementById("one");
+      two = document.getElementById("two");
+      three = document.getElementById("three")
+      d = fetch("https://fakestoreapi.com/products")
+        .then((e) => e.json())
+        .then((e) => {
+          for (i of e) {
+            let card = document.createElement("div");
+            card.id = "card";
+            let img = document.createElement("img");
+            title = document.createElement("p");
+            price = document.createElement("p");
+            card.appendChild(img);
+            img.setAttribute("src", `${i.image}`);
+
+            card.appendChild(img);
+            price.innerHTML = "Price:" + i.price;
+            title.innerHTML = i.title;
+
+            card.appendChild(price);
+            card.appendChild(title);
+            cont.appendChild(card);
+          }
+        });
+    
+      
+      one.addEventListener("click",()=>{
+        cont.innerHTML = "";
+        d = fetch("https://fakestoreapi.com/products")
+          .then((e) => e.json())
+          .then((e) => {
+            for (i of e) {
+              if (i.price < 100) {
+                let card = document.createElement("div");
+                card.id = "card";
+                let img = document.createElement("img");
+                title = document.createElement("p");
+                price = document.createElement("p");
+                card.appendChild(img);
+                img.setAttribute("src", `${i.image}`);
+
+                card.appendChild(img);
+                price.innerHTML = "Price:" + i.price;
+                title.innerHTML = i.title;
+
+                card.appendChild(price);
+                card.appendChild(title);
+                cont.appendChild(card);
+              }
+            }
+          });
+      });
+      two.addEventListener("click", () => {
+        cont.innerHTML = "";
+        d = fetch("https://fakestoreapi.com/products")
+          .then((e) => e.json())
+          .then((e) => {
+            for (i of e) {
+              if (i.price > 100 && i.price < 300) {
+                let card = document.createElement("div");
+                card.id = "card";
+                let img = document.createElement("img");
+                title = document.createElement("p");
+                price = document.createElement("p");
+                card.appendChild(img);
+                img.setAttribute("src", `${i.image}`);
+
+                card.appendChild(img);
+                price.innerHTML = "Price:" + i.price;
+                title.innerHTML = i.title;
+
+                card.appendChild(price);
+                card.appendChild(title);
+                cont.appendChild(card);
+              }
+            }
+          });
+      });
+      three.addEventListener("click", () => {
+        cont.innerHTML = "";
+        d = fetch("https://fakestoreapi.com/products")
+          .then((e) => e.json())
+          .then((e) => {
+            for (i of e) {
+              if (i.price > 300) {
+                let card = document.createElement("div");
+                card.id = "card";
+                let img = document.createElement("img");
+                title = document.createElement("p");
+                price = document.createElement("p");
+                card.appendChild(img);
+                img.setAttribute("src", `${i.image}`);
+
+                card.appendChild(img);
+                price.innerHTML = "Price:" + i.price;
+                title.innerHTML = i.title;
+
+                card.appendChild(price);
+                card.appendChild(title);
+                cont.appendChild(card);
+              }
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
