@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      main{
+        display: grid;
+        grid-template-columns: 200px;
+        justify-content: space-around;
+      }
+      #cont {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 20px;
+      }
+      #d {
+        box-shadow: 0 0 10px;
+        display: grid;
+        /* align-items: center; */
+        justify-content: center;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <input type="text" name="" id="name" placeholder="Name" /><br />
+      <input type="text" id="city" placeholder="City" /><br />
+      <button id="btn">submit Data</button><br />
+      <button id="get">Show Data</button>
+    </main>
+
+    <div id="cont"></div>
+
+    <script>
+      btn = document.getElementById("btn");
+      n = document.getElementById("name");
+      c = document.getElementById("city");
+      get = document.getElementById("get");
+      cont = document.getElementById("cont");
+      get.addEventListener("click", () => {
+        cont.innerHTML = "";
+        data2 = fetch("http://localhost:1000/posts")
+          .then((e) => e.json())
+          .then((e) => {
+            for (i of e) {
+              d = document.createElement("div");
+              h4 = document.createElement("h4");
+              p = document.createElement("p");
+              d.id = "d";
+              cont.appendChild(d);
+              d.appendChild(h4);
+              d.appendChild(p);
+              h4.innerHTML = "Name:" + i.name;
+              p.innerHTML = "City:" + i.city;
+            }
+          });
+        // console.log(data2)
+      });
+
+      btn.addEventListener("click", () => {
+        if (n.value != "" && c.value != "") {
+          data1 = { name: n.value, city: c.value };
+
+          data = fetch("http://localhost:1000/posts", {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data1),
+          });
+          data.then((e) => e.json()).then((e) => console.log(e));
+        } else {
+          alert("Enter Data");
+        }
+      });
+
+      // data.then((e)=>e.json()).then((e)=>console.log(e))
+    </script>
+  </body>
+</html>
